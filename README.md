@@ -1,37 +1,99 @@
-# 🏪 Griya Space - E-Commerce Bahan Bangunan
+# Griya Space – Sistem Informasi Manajemen Toko Bangunan
 
-**Griya Space** adalah platform e-commerce dan sistem manajemen toko bangunan berbasis web yang dirancang mirip dengan Shopee, namun dikhususkan untuk kebutuhan bahan bangunan. Aplikasi ini mempermudah pengelolaan produk, stok, transaksi, hingga multi-vendor (supplier) secara terintegrasi.
+Griya Space adalah sistem informasi manajemen toko bangunan berbasis web yang dikembangkan untuk membantu mengelola aktivitas operasional toko secara terintegrasi.
 
----
-
-## 🚀 Fitur Utama
-* **Multi-Role Access**: Manajemen akses untuk Pembeli, Penjual/Supplier, dan Admin Toko.
-* **Manajemen Produk & Stok**: Pembaruan stok bahan bangunan secara *real-time*.
-* **Sistem Keranjang & Checkout**: Proses belanja yang intuitif seperti *marketplace* besar.
-* **Laporan Penjualan**: Ringkasan transaksi terintegrasi untuk kebutuhan operasional toko.
-
-## 🛠️ Teknologi yang Digunakan
-* **Backend:** PHP Native / Framework
-* **Database:** MySQL
-* **Frontend:** HTML5, CSS3, JavaScript
-
-## 📂 Struktur Repositori
-* `/griya-space` : Berisi seluruh file source code aplikasi web.
-* `/database` : Berisi file `.sql` untuk skema database aplikasi.
+Sistem ini menyediakan beberapa hak akses pengguna, yaitu Pemilik, Admin, Kasir, Gudang, dan Pelanggan, dengan fitur yang disesuaikan berdasarkan kebutuhan masing-masing pengguna.
 
 ---
 
-## 💻 Cara Menjalankan Proyek Secara Lokal
-Jika Anda ingin menguji coba aplikasi ini di komputer Anda, ikuti langkah berikut:
+## Fitur Utama
 
-1. **Download / Clone Repositori:**
-   Unduh zip proyek ini atau gunakan perintah git clone.
-2. **Siapkan Database:**
-   * Buka `localhost/phpmyadmin`.
-   * Buat database baru.
-   * *Import* file database `.sql` yang ada di dalam folder `/database`.
-3. **Konfigurasi Koneksi:**
-   * Sesuaikan *username* dan *password* database Anda pada file koneksi database Anda di folder proyek.
-4. **Jalankan Aplikasi:**
-   * Pindahkan folder proyek ke dalam direktori server lokal Anda (misal: `htdocs` untuk XAMPP).
-   * Akses melalui browser di alamat `http://localhost/griya-space`.
+### Multi-Role Access
+
+Sistem memiliki hak akses berdasarkan peran pengguna:
+
+- Pemilik – Memantau informasi dan aktivitas toko.
+- Admin – Mengelola data dan pengguna sistem.
+- Kasir – Mengelola proses transaksi penjualan.
+- Gudang – Mengelola dan memantau persediaan barang.
+- Pelanggan – Melihat produk dan melakukan transaksi.
+
+### Manajemen Produk
+
+- Menambahkan, mengubah, dan menghapus data produk.
+- Mengelola informasi harga dan stok produk.
+- Mengelola kategori bahan bangunan.
+
+### Manajemen Kategori
+
+- Mengelola kategori produk.
+- Mengelompokkan produk berdasarkan jenis bahan bangunan.
+
+### Manajemen Supplier
+
+- Mengelola data supplier.
+- Menyimpan informasi supplier yang berkaitan dengan produk toko.
+
+### Manajemen Stok
+
+- Memantau ketersediaan barang.
+- Mengelola data persediaan produk.
+
+### Transaksi
+
+- Mengelola proses transaksi penjualan.
+- Menyimpan data transaksi ke dalam database.
+- Mendukung proses transaksi berdasarkan hak akses pengguna.
+
+### Informasi dan Laporan
+
+- Menampilkan informasi terkait aktivitas dan transaksi toko.
+- Membantu pemilik dan pengelola dalam memantau operasional toko.
+
+---
+
+## Teknologi yang Digunakan
+
+### Backend
+
+- PHP Native
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+### Database
+
+- MySQL
+
+### Development Tools
+
+- Visual Studio Code
+- Laragon
+- phpMyAdmin
+
+---
+
+## Struktur Repository
+
+```text
+griya-space/
+├── database/
+│   └── *.sql
+│
+├── griya-space/
+│   ├── assets/
+│   ├── auth/
+│   ├── config/
+│   ├── dashboard/
+│   │   ├── admin/
+│   │   ├── kasir/
+│   │   ├── gudang/
+│   │   ├── pemilik/
+│   │   └── pelanggan/
+│   ├── cek_logo.php
+│   └── index.php
+│
+└── README.md
